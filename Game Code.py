@@ -35,13 +35,14 @@ if __name__ == "__main__":
     default_font = pygame.font.Font('assets/fonts/flappy-bird.ttf', 60)
     game_sounds = {
         'click': pygame.mixer.Sound('assets/sounds/click.wav'),
-        'die': pygame.mixer.Sound('assets/sounds/whooshnyan.mp3'),
+        'die': pygame.mixer.Sound('assets/sounds/dienyan.mp3'),
         'point': pygame.mixer.Sound('assets/sounds/dienyan.mp3'),
         'jump': pygame.mixer.Sound('assets/sounds/whoosh.wav'),
-        'whoosh': pygame.mixer.Sound('assets/sounds/dienyan.mp3')
+        'whoosh': pygame.mixer.Sound('assets/sounds/dienyan.mp3'),
+        'background': pygame.mixer.Sound('assets/sounds/whooshnyan.mp3')
     }
     game_images = {
-        'background': pygame.image.load('assets/images/Backgroundnyan.png').convert_alpha(),
+        'background': pygame.image.load('assets/images/backgroundnyan.png').convert_alpha(),
         'background1': pygame.image.load('assets/images/backgroundnyan.png').convert_alpha(),
         'ground': pygame.image.load('assets/images/ground.png').convert_alpha(),
         'logo': pygame.image.load('assets/images/logonyan.png').convert_alpha(),
@@ -70,6 +71,7 @@ if __name__ == "__main__":
         flappy.rect.x = 100
         flappy.rect.y = int(screen_height / 2)
         new_score = 0
+
         return new_score
 
 
@@ -206,7 +208,12 @@ if __name__ == "__main__":
     restart_button = RestartButton(screen_width // 2 - 107, screen_height // 2 + 118, game_images['restart_button'])
     Whoosh_sound = pygame.mixer.Sound(game_sounds['whoosh'])
 
+    background_sound = game_sounds['background']
+    background_sound.set_volume(0.1)
+    background_sound.play(-1)
+
     run = True
+    # game_sounds['background'].play()
     while run:
 
         clock.tick(fps)
