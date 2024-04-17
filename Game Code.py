@@ -38,7 +38,7 @@ if __name__ == "__main__":
         'die': pygame.mixer.Sound('assets/sounds/dienyan.mp3'),
         'point': pygame.mixer.Sound('assets/sounds/Score-hit.wav'),
         'jump': pygame.mixer.Sound('assets/sounds/whoosh.wav'),
-        'whoosh': pygame.mixer.Sound('assets/sounds/air-whoosh.wav')
+        'whoosh': pygame.mixer.Sound('assets/sounds/whooshnyan.mp3')
     }
     game_images = {
         'background': pygame.image.load('assets/images/Backgroundnyan.png').convert_alpha(),
