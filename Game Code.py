@@ -35,10 +35,10 @@ if __name__ == "__main__":
     default_font = pygame.font.Font('assets/fonts/flappy-bird.ttf', 60)
     game_sounds = {
         'click': pygame.mixer.Sound('assets/sounds/click.wav'),
-        'die': pygame.mixer.Sound('assets/sounds/dienyan.mp3'),
-        'point': pygame.mixer.Sound('assets/sounds/Score-hit.wav'),
+        'die': pygame.mixer.Sound('assets/sounds/whooshnyan.mp3'),
+        'point': pygame.mixer.Sound('assets/sounds/dienyan.mp3'),
         'jump': pygame.mixer.Sound('assets/sounds/whoosh.wav'),
-        'whoosh': pygame.mixer.Sound('assets/sounds/whooshnyan.mp3')
+        'whoosh': pygame.mixer.Sound('assets/sounds/dienyan.mp3')
     }
     game_images = {
         'background': pygame.image.load('assets/images/Backgroundnyan.png').convert_alpha(),
