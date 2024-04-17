@@ -9,11 +9,11 @@ screen_height = 936
 screen = pygame.display.set_mode((screen_width, screen_height))
 
 white = (255, 255, 255)
-BACKGROUNDCLR = (113, 197, 207)
+BACKGROUNDCLR = (0, 52, 102)
 
 ground_scroll = 0
-scroll_speed = 5
-pipe_frequency = 1500  # Milliseconds
+scroll_speed = 3
+pipe_frequency = 3000  # Milliseconds
 pass_pipe = False
 last_pipe = pygame.time.get_ticks() - pipe_frequency
 flying = False
@@ -21,8 +21,8 @@ game_over = False
 score = 0
 live = True
 revive = False
-default_Speed = 5
-Boost = 25
+default_Speed = 7
+Boost = 30
 Count = 0
 AllMovementSpeed = False
 BGx = 0
@@ -41,13 +41,13 @@ if __name__ == "__main__":
         'whoosh': pygame.mixer.Sound('assets/sounds/air-whoosh.wav')
     }
     game_images = {
-        'background': pygame.image.load('assets/images/Background1.jpeg').convert_alpha(),
-        'background1': pygame.image.load('assets/images/background.png').convert_alpha(),
+        'background': pygame.image.load('assets/images/Backgroundnyan.png').convert_alpha(),
+        'background1': pygame.image.load('assets/images/backgroundnyan.png').convert_alpha(),
         'ground': pygame.image.load('assets/images/ground.png').convert_alpha(),
-        'logo': pygame.image.load('assets/images/logo.png').convert_alpha(),
+        'logo': pygame.image.load('assets/images/logonyan.png').convert_alpha(),
         'score_menu': pygame.image.load('assets/images/Menu.png').convert_alpha(),
         'restart_button': pygame.image.load('assets/images/Start-button.png').convert_alpha(),
-        'pipe': pygame.image.load('assets/images/Pipe.png').convert_alpha()
+        'pipe': pygame.image.load('assets/images/pipenyan.png').convert_alpha()
     }
 
     def round_down(n, decimals=0):
@@ -80,7 +80,7 @@ if __name__ == "__main__":
             self.index = 0
             self.counter = 0
             for num in range(1, 4):
-                img = pygame.image.load(f'assets/images/bird-{num}.png').convert_alpha()
+                img = pygame.image.load(f'assets/images/nyan{num}.png').convert_alpha()
                 self.images.append(img)
             self.image = self.images[self.index]
             self.rect = self.image.get_rect()
